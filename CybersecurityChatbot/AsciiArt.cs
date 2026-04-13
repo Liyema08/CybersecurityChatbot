@@ -22,7 +22,7 @@
     ║      ╚═════╝   ╚═╝   ╚═════╝ ╚══════╝╚═╝  ╚═╝                           ║
     ║                                                                          ║
     ║                                                                          ║
-    ║                       YEMA-CYBER SECURITY BOT                       ║
+    ║                       YEMA-CYBER SECURITY BOT v1.0                      ║
     ║                                                                          ║
     ║                   YOUR PERSONAL CYBERSECURITY ASSISTANT                   ║
     ║                                                                          ║
