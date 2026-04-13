@@ -1,4 +1,3 @@
-// YEMA-CYBER Security Bot - Your Personal Cybersecurity Assistant
 using System;
 
 namespace CybersecurityChatbot
@@ -7,16 +6,12 @@ namespace CybersecurityChatbot
     {
         static void Main(string[] args)
         {
-            Console.Title = "Cybersecurity Awareness Bot";
+            Console.Title = "YEMA-CYBER Bot";
             Console.SetWindowSize(120, 40);
-
-            // Play voice greeting
+            
             AudioManager.PlayVoiceGreeting();
-
-            // Display ASCII art header
-            UIManager.DisplayHeader();
-
-            // Initialize chatbot
+            UIManager.ShowWelcome();
+            
             Chatbot chatbot = new Chatbot();
             chatbot.Start();
         }
