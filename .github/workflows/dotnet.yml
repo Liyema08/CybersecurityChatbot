@@ -18,11 +18,17 @@ jobs:
       with:
         dotnet-version: 6.0.x
     
+    - name: List directory structure (debugging)
+      run: |
+        echo "Current directory:"
+        pwd
+        echo "Files in root:"
+        ls -la
+        echo "Looking for csproj files:"
+        find . -name "*.csproj"
+    
     - name: Restore dependencies
-      run: dotnet restore CybersecurityChatbot/
+      run: dotnet restore CybersecurityChatbot/CybersecurityChatbot.csproj
     
     - name: Build
-      run: dotnet build CybersecurityChatbot/ --no-restore --configuration Release
-    
-    - name: Verify build success
-      run: echo "Build completed successfully!"
+      run: dotnet build CybersecurityChatbot/CybersecurityChatbot.csproj --configuration Release --no-restore
