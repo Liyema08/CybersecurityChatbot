@@ -1,10 +1,6 @@
-# YEMA-CYBER Security Bot
+## YEMA-CYBER Security Bot
 
 A cybersecurity awareness chatbot that educates users about online safety, password security, and phishing prevention.
-
-## Project Overview
-
-This console-based chatbot helps users learn about cybersecurity through interactive conversation. It features a voice greeting, ASCII art logo, personalized responses, and educational content about online safety.
 
 ## Features
 
@@ -16,31 +12,44 @@ This console-based chatbot helps users learn about cybersecurity through interac
 - Input Validation - Handles empty inputs gracefully
 - CI/CD Pipeline - GitHub Actions for automated builds
 
- How to Run
+## CI/CD Status
 
- Prerequisites
-- Windows OS
-- .NET 6.0 SDK or later
-- Visual Studio 2022
+![CI Success](Screenshot 2026-04-13 231331.png)
 
-Steps
+The GitHub Actions workflow automatically builds and tests the project on every push. The green checkmark confirms all builds are successful.
+
+## How to Run
+
 1. Clone the repository
-2. Open the solution in Visual Studio 2022
+2. Open in Visual Studio 2022
 3. Build the solution (Ctrl+Shift+B)
 4. Run the program (F5)
 
- Example Questions
+## Example Questions
 
-Type these questions to interact with the bot:
+- "How are you?"
+- "Tell me about passwords"
+- "What is phishing?"
+- "How to browse safely?"
+- "What is 2FA?"
+- "goodbye" (to exit)
 
-| Question | What the bot explains |
+## Project Structure
 
-| "How are you?" | Friendly greeting |
-| "Tell me about passwords" | Password safety tips |
-| "What is phishing?" | How to spot phishing scams |
-| "How to browse safely?" | Safe browsing practices |
-| "What is 2FA?" | Two-factor authentication |
+- Program.cs - Entry point
+- Chatbot.cs - Conversation logic
+- ResponseHandler.cs - Response generation
+- UIManager.cs - Console UI management
+- AudioManager.cs - Voice greeting playback
+- AsciiArt.cs - ASCII art storage
+- greeting.wav - Voice greeting file
 
-Type `goodbye`, `quit`, or `exit` to end the conversation.
+## Author
 
- Project Structure
+Liyema
+
+## GitHub Repository
+
+https://github.com/Liyema08/CybersecurityChatbot
+
+https://github.com/Liyema08/CybersecurityChatbot
