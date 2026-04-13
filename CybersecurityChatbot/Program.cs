@@ -1,4 +1,5 @@
-﻿using System;
+// YEMA-CYBER Security Bot - Your Personal Cybersecurity Assistant
+using System;
 
 namespace CybersecurityChatbot
 {
