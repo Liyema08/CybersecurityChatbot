@@ -5,56 +5,56 @@ namespace CybersecurityChatbot
 {
     public static class UIManager
     {
-        public static void DisplayHeader()
+        public static void ShowWelcome()
         {
             Console.Clear();
-            WriteColoredText(AsciiArt.GetLogo(), ConsoleColor.Cyan);
-            Thread.Sleep(1000);
-
-            WriteColoredText("\n" + new string('█', 80), ConsoleColor.DarkGreen);
-            WriteColoredText("          CYBERSECURITY AWARENESS BOT v1.0", ConsoleColor.Green);
-            WriteColoredText(new string('█', 80), ConsoleColor.DarkGreen);
-            Thread.Sleep(500);
-        }
-
-        public static void WriteColoredText(string text, ConsoleColor color, bool newLine = true)
-        {
-            Console.ForegroundColor = color;
-            if (newLine)
-                Console.WriteLine(text);
-            else
-                Console.Write(text);
-            Console.ResetColor();
-        }
-
-        public static void TypingEffect(string text, int delayMs)
-        {
+            
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(AsciiArt.GetLogo());
+            
             Console.ForegroundColor = ConsoleColor.Green;
-            foreach (char c in text)
-            {
-                Console.Write(c);
-                Thread.Sleep(delayMs);
-            }
-            Console.ResetColor();
-            Console.WriteLine();
-        }
-
-        public static void DisplayBorder(char borderChar, ConsoleColor color)
-        {
-            WriteColoredText(new string(borderChar, 80), color);
-        }
-
-        public static void DisplaySectionHeader(string title)
-        {
-            WriteColoredText($"\n---- {title} ---", ConsoleColor.Magenta);
-        }
-    }
-            public static void ShowFooter()
-        {
-            Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.WriteLine("\n" + new string('=', 78));
-            Console.WriteLine("  Thank you for using YEMA-CYBER Bot! Stay safe online!  ");
+            Console.WriteLine("                     YEMA-CYBER BOT");
             Console.WriteLine(new string('=', 78));
             Console.ResetColor();
+            
+            Thread.Sleep(800);
         }
+
+        public static void Say(string message, ConsoleColor color = ConsoleColor.White)
+        {
+            Console.ForegroundColor = color;
+            Console.WriteLine(message);
+            Console.ResetColor();
+        }
+
+        public static void Ask(string question)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(question);
+            Console.ResetColor();
+        }
+
+        public static void Type(string message, int speed = 30)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            foreach (char c in message)
+            {
+                Console.Write(c);
+                Thread.Sleep(speed);
+            }
+            Console.WriteLine();
+            Console.ResetColor();
+        }
+
+        public static void Line()
+        {
+            Console.WriteLine(new string('─', 78));
+        }
+        
+        public static void Wait(int milliseconds)
+        {
+            Thread.Sleep(milliseconds);
+        }
+    }
 }
