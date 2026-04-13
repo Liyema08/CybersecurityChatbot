@@ -49,4 +49,12 @@ namespace CybersecurityChatbot
             WriteColoredText($"\n---- {title} ---", ConsoleColor.Magenta);
         }
     }
+            public static void ShowFooter()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine("\n" + new string('=', 78));
+            Console.WriteLine("  Thank you for using YEMA-CYBER Bot! Stay safe online!  ");
+            Console.WriteLine(new string('=', 78));
+            Console.ResetColor();
+        }
 }
