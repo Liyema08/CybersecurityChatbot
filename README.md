@@ -21,7 +21,7 @@ The GitHub Actions workflow automatically builds and tests the project on every 
 ## How to Run
 
 1. Clone the repository
-2. Open in Visual Studio 2022
+2. Open in Visual Studio 2026
 3. Build the solution (Ctrl+Shift+B)
 4. Run the program (F5)
 
